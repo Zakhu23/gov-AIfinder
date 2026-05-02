@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GovAI</title>
+    <title>GovAI Finder</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 50px auto;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<h1>✅ HTML WORKING</h1>
+<h1>🚀 GovAI Scheme & Exam Finder</h1>
+
+<div class="box">
+<form method="POST">
+
+<input type="number" name="age" placeholder="Enter Age" required>
+
+<input type="number" name="income" placeholder="Enter Income" required>
+
+<select name="education">
+    <option value="">Select Education</option>
+    <option>12th Pass</option>
+    <option>Graduate</option>
+</select>
+
+<select name="occupation">
+    <option value="">Select Occupation</option>
+    <option>Student</option>
+    <option>Farmer</option>
+    <option>Unemployed</option>
+</select>
+
+<select name="state">
+<option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Himachal Pradesh</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Sikkim</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Tripura</option>
+<option>Uttar Pradesh</option>
+<option>Uttarakhand</option>
+<option>West Bengal</option>
+<option>Delhi</option>
+<option>Puducherry</option>
+<option>Jammu and Kashmir</option>
+<option>Ladakh</option>
+<option>Chandigarh</option>
+<option>Andaman and Nicobar Islands</option>
+<option>Dadra and Nagar Haveli and Daman and Diu</option>
+<option>Lakshadweep</option>
+</select>
+
+<button type="submit">Find Schemes&Eams</button>
+</form>
+</div>
+
+{% if results %}
+<h2>Recommended:</h2>
+<ul>
+{% for r in results %}
+<li>{{ r }}</li>
+{% endfor %}
+</ul>
+{% endif %}
 
 </body>
 </html>
